@@ -1,10 +1,10 @@
 // Création de l'interface Teacher (T1)
 interface Teacher {
     readonly firstName: string;
-    readonly lastName: string
-    fullTimeEmployee: boolean
-    yearsOfExperience?: number
-    location: string
+    readonly lastName: string;
+    fullTimeEmployee: boolean;
+    yearsOfExperience?: number;
+    location: string;
     [key: string]: any; // Autoriser l'ajout de propriétés dynamiques
 }
 
@@ -60,7 +60,7 @@ interface StudentClassInterface {
         firstName: string;
         lastName: string;
         workOnHomework(): string;
-        displayName(): string
+        displayName(): string;
 }
 
 // Classe StudentClass qui implémente l'interface StudentClassInterface
@@ -74,11 +74,11 @@ class StudentClass implements StudentClassInterface {
   }
 
   workOnHomework(): string {
-    return "Currently working"
+    return "Currently working";
   }
 
   displayName(): string {
-    return this.firstName
+    return this.firstName;
   }
 };
 
