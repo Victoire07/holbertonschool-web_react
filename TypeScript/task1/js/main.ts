@@ -80,5 +80,9 @@ class StudentClass implements StudentClassInterface {
   displayName(): string {
     return this.firstName
   }
-}
+};
+
+const student1 = new StudentClass({ firstName: "John", lastName: "Doe" });
+console.log(student1.workOnHomework());
+console.log(student1.displayName());
 
