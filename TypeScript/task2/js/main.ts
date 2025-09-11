@@ -71,3 +71,20 @@ function executeWork(employee: Employee): string {
 
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
+
+// Type littéral de chaîne (Subjects)
+type Subjects = "Math" | "History";
+
+// Fonction teachClass pour la matière
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math'
+    }
+    else {
+        return 'Teaching History'
+    }
+}
+
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
+
