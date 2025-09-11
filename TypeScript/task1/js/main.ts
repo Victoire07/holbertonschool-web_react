@@ -1,4 +1,4 @@
-// Création de l'interface
+// Création de l'interface Teacher (T1)
 interface Teacher {
     readonly firstName: string;
     readonly lastName: string
@@ -19,3 +19,7 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
+// Création de l'interface Director (T2)
+interface Directors extends Teacher {
+    numberOfReports: number
+}
