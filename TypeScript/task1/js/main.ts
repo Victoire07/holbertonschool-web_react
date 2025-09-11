@@ -48,3 +48,23 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
 }
 
 console.log(printTeacher("John", "Doe"));
+
+// Interface pour le constructor
+interface StudentConstructor {
+    firstName: string;
+    lastName: string;
+}
+
+// Interface pour la classe
+interface StudentClassInterface {
+        firstName: string;
+        lastName: string;
+        workOnHomework(): string;
+        displayName(): string
+}
+
+// Classe StudentClass qui implémente l'interface StudentClassInterface
+class StudentClass implements StudentClassInterface {
+    firstName: string;
+    lastName: string;
+}
