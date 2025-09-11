@@ -12,9 +12,9 @@ interface TeacherInterface {
     workTeacherTasks(): string;
 }
 
-// Création de la classe Director qui implémente DirectorInterface
+// Création de la classe Director qui implémente DirectorInterface (T5)
 class Director implements DirectorInterface {
-    workFromHome(): string; {
+    workFromHome(): string {
         return "Working from home"
     }
     getCoffeeBreak(): string {
@@ -26,7 +26,7 @@ class Director implements DirectorInterface {
   }
 };
 
-// Création de classe Teacher qui implémente TeacherInterface
+// Création de classe Teacher qui implémente TeacherInterface (T5)
 class Teacher implements TeacherInterface {
     workFromHome(): string {
         return "Cannot work from home"
@@ -38,4 +38,20 @@ class Teacher implements TeacherInterface {
         return "Getting to work"
     }
 }
+
+// Un employé sera soit type Director ou Teacher (T5)
+type Employee = Director | Teacher;
+
+// Fonction CreateEmployee qui permet selon le salaire de dire si l'employé et teach ou dir (T5)
+function createEmployee(salary: number | string): Employee {
+
+if (typeof salary === 'number' && salary < 500) {
+    return new Teacher();
+} else {
+    return new Director();
+}
+}
+console.log(createEmployee(200));
+console.log(createEmployee(1000));
+console.log(createEmployee('$500'));
 
