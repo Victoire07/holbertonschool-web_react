@@ -54,4 +54,3 @@ if (typeof salary === 'number' && salary < 500) {
 console.log(createEmployee(200).constructor.name);
 console.log(createEmployee(1000).constructor.name);
 console.log(createEmployee('$500').constructor.name);
-
