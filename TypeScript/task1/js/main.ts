@@ -67,4 +67,18 @@ interface StudentClassInterface {
 class StudentClass implements StudentClassInterface {
     firstName: string;
     lastName: string;
+
+    constructor({ firstName, lastName }: StudentConstructor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working"
+  }
+
+  displayName(): string {
+    return this.firstName
+  }
 }
+
