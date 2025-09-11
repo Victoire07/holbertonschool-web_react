@@ -23,3 +23,15 @@ console.log(teacher3);
 interface Directors extends Teacher {
     numberOfReports: number
 }
+
+// Création d'un objet 
+const director1: Directors = {
+  firstName: "Maria",
+  lastName: "Rehri",
+  fullTimeEmployee: false,
+  location: "Paris",
+  contract: false,
+  numberOfReports: 17,
+};
+
+console.log(director1);
