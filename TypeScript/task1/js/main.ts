@@ -35,3 +35,16 @@ const director1: Directors = {
 };
 
 console.log(director1);
+
+// Interface de la fonction printTeacherFunction
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+//  Déclaration de la fonction printTeacher qui respecte l'interface
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+    return `${firstName.charAt(0)}.${lastName}`
+    // firstName.charAt(0) donne la 1ère lettre du prénom + nom après
+}
+
+console.log(printTeacher("John", "Doe"));
