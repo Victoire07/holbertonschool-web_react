@@ -2,7 +2,7 @@
 
 namespace Subjects {
     export class Subject {
-        teacher!: Teacher; // attribut qui implémente l'interface Teacher
+        protected teacher?: Teacher;
 
         // setter pour définir le teacher
         setTeacher(teacher: Teacher): void {
